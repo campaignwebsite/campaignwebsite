@@ -1,0 +1,17 @@
+{
+  "name": "campaign-website-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"./packages/*\" dev",
+    "build": "pnpm --filter \"./packages/*\" build",
+    "campaign-website:dev": "pnpm --filter campaign-website dev",
+    "docs:dev": "pnpm --filter docs dev",
+    "campaign-website:build": "pnpm --filter campaign-website build",
+    "docs:build": "pnpm --filter docs build"
+  },
+  "devDependencies": {
+    "vitepress": "2.0.0-alpha.12",
+    "vue": "^3.5.22"
+  }
+}
