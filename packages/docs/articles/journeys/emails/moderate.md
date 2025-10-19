@@ -130,8 +130,8 @@ So that I can ensure quality and prevent abuse
 
 - [Create Email](./create.md) - Understanding email creation
 - [Send Email](./send.md) - What happens after approval
-- [Manage Defaults](./manage-defaults.md) - Setting moderation policies
-- [Moderate Events](./moderate-events.md) - Similar moderation flow
+- [Manage Defaults](../admin/manage-defaults.md) - Setting moderation policies
+- [Moderate Events](../admin/moderate-events.md) - Similar moderation flow
 
 ## Technical Notes
 
