@@ -1,5 +1,7 @@
 # User Journeys
 
+> **Note:** These user journeys are work-in-progress. They represent planned features and workflows that may change as the platform evolves. Please check for any discrepancies between different documentation files and report them for review.
+
 This folder contains documentation for the different user journeys through the campaign website. Each journey describes a sequence of actions a user takes to accomplish a specific goal.
 
 ## How to Write User Journeys
