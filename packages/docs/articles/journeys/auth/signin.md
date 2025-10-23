@@ -1,5 +1,7 @@
 # User: Sign In
 
+> **Note:** See notes in the register.md file regarding anonymous accounts and authentication flow redesign.
+
 ## Overview
 
 A returning user signs in to access their account and platform features using passkey authentication.

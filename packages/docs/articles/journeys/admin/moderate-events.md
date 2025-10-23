@@ -32,13 +32,16 @@ So that I can ensure quality and prevent inappropriate content
    - Can: Sort and filter pending events
    - Click: Event to review details
 
-3. Admin views event details:
+3. Admin clicks on event to review:
+   - System navigates to event edit page
+   - Event edit view shown with moderation section
    - Sees: Full event information
    - Title, description, date/time, location
-   - Organizer information and history
-   - Associated group/campaign (if any)
    - Images and attachments
+   - Sees: Link to organizer's profile
+   - Sees: Link to associated group/campaign (if any)
    - Can: View event as it will appear publicly
+   - Note: Post-approval editing may require versioning (future update)
 
 4. Admin reviews event:
    - Checks: Appropriate content
@@ -46,7 +49,7 @@ So that I can ensure quality and prevent inappropriate content
    - Checks: No spam or misleading information
    - Checks: Complies with community guidelines
    - Checks: Organizer credibility
-   - Can: View organizer's previous events
+   - Can: Click link to view organizer's profile (with event history)
 
 5. Admin makes decision:
    - Option 1: Approve event
@@ -67,7 +70,7 @@ So that I can ensure quality and prevent inappropriate content
 7. If admin rejects:
    - Clicks "Reject Event" button
    - Modal: Enter rejection reason (required)
-   - Categories: Inappropriate, spam, guideline violation, duplicate, other
+   - Note: Rejection categories to be determined based on actual usage
    - Detailed reason field (text area)
    - Clicks "Confirm Rejection"
    - System updates status to "rejected"
@@ -94,7 +97,8 @@ So that I can ensure quality and prevent inappropriate content
 ### If event is spam:
 - Admin marks as spam
 - Organizer account flagged
-- If multiple spam: Account suspended
+- Admins can easily view flagged accounts and are notified about them
+- Note: Account suspension is not automatic
 - Logged for pattern analysis
 
 ### If event is duplicate:
@@ -102,29 +106,11 @@ So that I can ensure quality and prevent inappropriate content
 - Suggests: Organizer join original
 - Rejection reason includes link
 
-### If admin needs more information:
-- Can: Contact organizer for clarification
-- Status: "Under review"
-- Organizer responds via platform
-- Review continues when info received
-
-### If multiple admins reviewing:
-- Shows: "Being reviewed by [Admin Name]"
-- Prevents: Duplicate reviews
-- Can: Take over if needed
-- Activity logged
-
-### If bulk moderating:
-- Can: Select multiple events
-- Can: Approve all selected
-- Confirmation for bulk action
-- Each approved individually
-
 ### If event auto-flagged:
 - System flags suspicious events
 - Warning badge shown
 - Admin can: Override if legitimate
-- Reasons: Mass organizer, unusual patterns
+- Note: Flagging criteria to be determined
 
 ## Success Criteria
 

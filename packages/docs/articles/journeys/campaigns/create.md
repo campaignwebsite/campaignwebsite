@@ -7,7 +7,7 @@ A campaign organizer creates a new campaign to mobilize people around a cause, i
 ## Prerequisites
 
 - User is authenticated
-- User has permission to create campaigns (organizer role)
+- User has admin permissions
 - User may have existing groups or events
 
 ## User Story
@@ -27,29 +27,16 @@ So that I can mobilize people around a cause
 2. User completes Step 1 - Basic Information:
    - Campaign Name (text input, required, min 5 characters)
    - Tagline (text input, required, max 100 characters)
-   - Campaign Type (dropdown: advocacy, fundraising, awareness, petition)
-   - Category (dropdown: environment, social justice, education, etc.)
-   - Start Date (date picker, required)
-   - End Date (date picker, optional)
    - System validates fields on blur
    - Button: "Next" to continue
 
 3. User completes Step 2 - Detailed Description:
-   - About the Campaign (rich text editor, required, min 100 characters)
-   - Goals and Objectives (rich text, required)
-   - Target Audience (text, optional)
-   - Success Metrics (text, optional)
-   - Featured Image (file upload, required, max 10MB)
-   - Video URL (optional, YouTube/Vimeo)
+   - Short Description (textarea)
+   - Page Content (rich text editor, not required, no min characters)
    - Button: "Next" to continue
 
 4. User completes Step 3 - Campaign Settings:
    - Visibility (public/private)
-   - Supporter settings (open/approval required)
-   - Allow supporters to create events (checkbox)
-   - Allow supporters to create groups (checkbox)
-   - Fundraising goal (number input, optional)
-   - Petition signature goal (number input, optional)
    - Geographic focus (location picker, optional)
 
 5. User completes Step 4 - Initial Setup (optional):
@@ -62,10 +49,10 @@ So that I can mobilize people around a cause
 6. User reviews and creates:
    - Sees: Preview of campaign page
    - Can: Go back to edit any section
+   - User enters custom slug for campaign
    - Clicks "Create Campaign"
    - System validates all required fields
    - System creates Campaign record
-   - System generates unique slug
    - Success: Redirected to `/campaigns/[slug]`
    - Sees: Success notification with next steps
 
@@ -96,7 +83,7 @@ So that I can mobilize people around a cause
 - Cancel: Returns to form
 
 ### If user lacks permissions:
-- Error: "You need organizer permissions"
+- Error: "You need admin permissions to create campaigns"
 - Link to request permissions
 - Cannot proceed with creation
 
@@ -109,7 +96,7 @@ So that I can mobilize people around a cause
 
 - Campaign record created with status "published"
 - User assigned as campaign organizer
-- Unique slug generated and accessible
+- Custom slug set and accessible
 - Campaign appears in listings (if public)
 - Associated groups/events linked
 - PostHog event tracked: "campaign_created"

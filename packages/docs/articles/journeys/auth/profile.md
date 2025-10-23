@@ -21,23 +21,30 @@ So that I can keep my information current and control my experience
 
 1. User navigates to profile:
    - Clicks profile icon/name in navigation
-   - Selects "Profile" or "Settings" from dropdown
-   - System navigates to `/profile` or `/settings`
+   - Selects "Settings" from dropdown
+   - System navigates to `/settings`
+   - Note: For admins, settings shows both personal and organization settings
 
 2. User sees profile dashboard:
-   - Tabs/sections: Personal Info, Email Preferences, Privacy, Security
+   - Tabs/sections: Personal Info, Email Preferences, Security
    - Quick overview: Profile completeness, recent activity
    - Can: Navigate between sections
 
 3. User views Personal Info section:
    - Current information displayed
    - Fields editable:
-     - Full Name (text input)
-     - Email Address (text input, requires verification if changed)
+     - First Name (text input)
+     - Email Address (text input, requires verification if changed, must not already be linked to another account)
      - Phone Number (text input, optional)
      - Profile Photo (image upload)
      - Bio (text area, optional)
-     - Location (text input, optional)
+     - Location fields:
+       - Postal Code
+       - House Number
+       - Street
+       - City
+       - Province
+       - Country (shown only if organization country setting is "worldwide", autofilled based on IP)
    - "Save Changes" button
 
 4. User edits personal information:
@@ -54,32 +61,20 @@ So that I can keep my information current and control my experience
    - Toggles for each type:
      - Event updates and reminders
      - Group notifications
-     - Campaign updates
-     - Platform news and features
-     - Marketing emails
+     - Updates from [Organization Name]
    - Changes auto-save
    - Can: Global "Unsubscribe from all" option
 
-6. User manages Privacy settings:
-   - Switches to Privacy tab
-   - Options:
-     - Profile visibility (public/private)
-     - Show in member lists (toggle)
-     - Allow search engines to index profile
-     - Data sharing preferences
-   - Changes auto-save
-   - Explains: Impact of each setting
-
-7. User manages Security settings:
+6. User manages Security settings:
    - Switches to Security tab
    - Sees: Active sessions list
    - Can: Sign out other sessions
    - Can: Set up passkey authentication
    - Can: View login history
    - Can: Download account data
-   - Can: Delete account (with confirmation)
+   - Can: Delete account (with confirmation, deletes personal data)
 
-8. User can manage passkeys:
+7. User can manage passkeys:
    - Clicks "Set up passkey"
    - Browser prompts: Register biometric/PIN
    - System stores: Public key
@@ -125,12 +120,19 @@ So that I can keep my information current and control my experience
 ### If deleting account:
 - Clicks "Delete Account" in Security
 - Warning modal: Explains consequences
+- Note: Consider implications for linked data (events created by organizers should not be deleted; other admins should be able to take over ownership)
 - Requires: Typing email to confirm
 - Optional: Reason for leaving (feedback)
 - Clicks "Permanently Delete"
-- Account marked for deletion
+- Account and personal data marked for deletion
 - Data removed after grace period
 - Confirmation email sent
+
+### If verifying email or passkey:
+- Email verification flow triggered when email changed
+- Passkey verification required for certain actions
+- User completes verification process
+- Account verified
 
 ### If session management:
 - Views all active sessions

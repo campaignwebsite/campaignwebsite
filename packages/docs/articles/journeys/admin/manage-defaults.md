@@ -26,7 +26,7 @@ So that I can maintain consistent policies and user experience
    - System navigates to `/admin/settings`
 
 2. Admin sees settings dashboard:
-   - Sections: General, Moderation, Email, Events, Groups, Campaigns
+   - Sections: General, Moderation, Email, Events, Groups, Campaigns, Analytics
    - Overview of current settings
    - Can: Navigate between sections
    - Recent changes log visible
@@ -60,10 +60,6 @@ So that I can maintain consistent policies and user experience
    - Default reply-to address
    - Email footer content
    - Unsubscribe settings
-   - Tracking settings (open/click tracking)
-   - Rate limits per organizer
-   - Maximum recipients per send
-   - Required approval threshold (e.g., >500 recipients)
 
 6. Admin manages Event Defaults:
    - Default event visibility (public/private)
@@ -74,36 +70,32 @@ So that I can maintain consistent policies and user experience
    - Default reminder schedules
 
 7. Admin manages Group Defaults:
-   - Default group visibility
-   - Default join settings (open/approval/invite)
-   - Maximum group size
    - Group image requirements
    - Required fields for group creation
    - Default member permissions
+   - Note: Individual groups can be set as hidden, and can have approval or invite-only join settings
+   - Note: Individual groups can have size limits; campaigns can set default group size limits
 
 8. Admin manages Campaign Defaults:
-   - Default campaign visibility
-   - Default supporter settings
-   - Campaign duration limits
    - Required fields for campaign creation
-   - Fundraising settings (if applicable)
-   - Petition settings (if applicable)
 
-9. Admin saves changes:
+9. Admin manages Analytics Settings:
+   - PostHog integration configuration
+   - PostHog project API key
+   - PostHog host URL
+   - Event tracking settings
+   - User identification settings
+
+10. Admin saves changes:
    - Clicks "Save Changes" button
-   - Confirmation modal: "Update platform settings?"
-   - Shows: Summary of changes
-   - Clicks "Confirm"
    - System validates settings
    - Settings updated in database
    - Success: "Settings updated successfully"
    - All users affected by changes
 
-10. Admin can review changes:
+11. Admin can review changes:
     - Audit log shows: All setting changes
     - Shows: Who changed what and when
-    - Can: Revert to previous settings
-    - Can: Export settings configuration
 
 ## Alternative Flows
 
@@ -118,34 +110,6 @@ So that I can maintain consistent policies and user experience
 - Confirmation: "Restore default settings?"
 - Settings reset to platform defaults
 - Success: "Settings reverted"
-
-### If exporting configuration:
-- Clicks "Export Settings"
-- System generates JSON/YAML file
-- File downloaded
-- Can: Use for backup or migration
-
-### If importing configuration:
-- Clicks "Import Settings"
-- File upload dialog
-- Selects configuration file
-- System validates format
-- Preview changes shown
-- Confirms import
-- Settings updated
-
-### If bulk updating:
-- Can: Select multiple settings
-- Apply common value
-- Confirmation required
-- Changes applied together
-
-### If setting conflicts:
-- System detects incompatible settings
-- Warning shown
-- Explains conflict
-- Suggests resolution
-- Admin must resolve before saving
 
 ## Success Criteria
 
@@ -168,9 +132,7 @@ So that I can maintain consistent policies and user experience
 - API: `PATCH /api/admin/settings`
 - Database: Updates `platform_settings` table
 - Auth: Requires admin permissions
-- Validation: Server-side for all settings
+- Validation: Client and server-side validation for all settings
 - Audit: All changes logged with admin ID and timestamp
-- Cache: Settings cached for performance
 - Propagation: Changes take effect immediately
-- Backup: Automatic backup before changes
 - Analytics: PostHog tracks setting changes and usage

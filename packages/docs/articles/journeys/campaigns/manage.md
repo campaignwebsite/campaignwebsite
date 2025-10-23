@@ -27,65 +27,51 @@ So that I can achieve our goals and engage supporters effectively
 
 2. User views Overview tab:
    - Sees: Key metrics (supporters, events, groups, engagement)
-   - Sees: Progress toward goals (fundraising, petition signatures)
    - Sees: Recent activity feed
    - Sees: Quick actions (create event, send update, invite supporters)
    - Charts: Growth over time, engagement trends
+   - Note: Fundraising features will be added later
 
 3. User views Supporters tab:
    - Sees: List of all campaign supporters
-   - Columns: Name, join date, activity level, public/private
+   - Columns: Name, join date, activity level
    - Can: Search and filter supporters
    - Can: Export supporter list (CSV)
-   - Can: View pending support requests (if approval required)
    - Shows: Total supporter count and growth
 
-4. User manages support requests (if applicable):
-   - Sees: Pending requests with supporter info
-   - Can: Approve or deny requests
-   - Clicks approve: Supporter added, notification sent
-   - Clicks deny: Request rejected
-
-5. User views Events tab:
+4. User views Events tab:
    - Sees: All campaign-related events
    - Filters: Upcoming, past, by organizer
    - Can: Create new campaign event
-   - Can: Approve/reject event proposals
    - Shows: Total events and attendance stats
 
-6. User views Groups tab:
+5. User views Groups tab:
    - Sees: Groups participating in campaign
    - Can: Invite existing groups
    - Can: Create new campaign group
    - Shows: Total groups and member reach
 
-7. User sends communications:
+6. User sends communications:
    - Switches to Communications tab
    - Sees: Message history
    - Clicks "Send Update" button
-   - Composes update with:
-     - Subject line (required)
-     - Message body (rich text)
-     - Recipients (all supporters, specific segments)
-     - Attachments (optional)
-   - Clicks "Send"
+   - Note: See existing email documentation for details
    - System sends to selected recipients
    - Success: Update posted and emailed
 
-8. User views Analytics tab:
+7. User views Analytics tab:
    - Sees: Detailed metrics and charts
    - Engagement: Page views, shares, conversions
-   - Demographics: Supporter locations, age groups
+   - Demographics: Supporter locations
    - Trends: Growth rate, peak activity times
    - Can: Export analytics data
+   - Note: Ensure event names are clear compared to other events in the app
 
-9. User manages campaign settings:
+8. User manages campaign settings:
    - Switches to Settings tab
    - Can: Edit campaign details
-   - Can: Update goals and metrics
    - Can: Change visibility settings
    - Can: Add/remove co-organizers
-   - Can: Close or archive campaign
 
 ## Alternative Flows
 

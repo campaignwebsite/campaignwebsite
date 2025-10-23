@@ -1,5 +1,7 @@
 # Admin: Moderate Groups
 
+> **Note:** The UX for moderating emails, groups, and events should be as similar as possible. UI elements and code should be reused where possible to create a consistent user experience and reduce maintenance.
+
 ## Overview
 
 An admin reviews and approves or rejects groups created by organizers to ensure quality and appropriateness.
@@ -32,12 +34,14 @@ So that I can ensure quality communities and prevent abuse
    - Can: Sort and filter pending groups
    - Click: Group to review details
 
-3. Admin views group details:
+3. Admin clicks on group to review:
+   - System navigates to group edit page
+   - Group edit view shown with moderation section
    - Sees: Full group information
    - Name, description, type, location
-   - Organizer information and history
    - Group settings (public/private, join requirements)
    - Group image/banner
+   - Sees: Link to organizer's profile
    - Can: View group as it will appear publicly
 
 4. Admin reviews group:
@@ -47,7 +51,7 @@ So that I can ensure quality communities and prevent abuse
    - Checks: No hate speech or discriminatory content
    - Checks: Complies with community guidelines
    - Checks: Organizer credibility
-   - Can: View organizer's previous groups
+   - Can: Click link to view organizer's profile (with group history)
 
 5. Admin makes decision:
    - Option 1: Approve group
@@ -68,7 +72,7 @@ So that I can ensure quality communities and prevent abuse
 7. If admin rejects:
    - Clicks "Reject Group" button
    - Modal: Enter rejection reason (required)
-   - Categories: Inappropriate, spam, duplicate, guideline violation, hate speech, other
+   - Note: Rejection categories to be determined based on actual usage
    - Detailed reason field (text area)
    - Clicks "Confirm Rejection"
    - System updates status to "rejected"
@@ -99,29 +103,17 @@ So that I can ensure quality communities and prevent abuse
 - Keeps other details approved
 - Organizer updates and resubmits
 
-### If group is spam:
-- Admin marks as spam
-- Organizer account flagged
-- If multiple spam groups: Account suspended
-- Pattern logged for analysis
+### If group is duplicate:
+- Admin identifies existing similar group
+- Can: Link to original group
+- Suggests: Organizer join existing group instead
+- Rejection includes link to alternative
 
-### If admin needs clarification:
-- Can: Contact organizer
-- Status: "Under review"
-- Organizer provides additional info
-- Review continues
-
-### If multiple admins reviewing:
-- Shows: "Being reviewed by [Admin Name]"
-- Prevents: Duplicate reviews
-- Can: Take over if urgent
-- All activity logged
-
-### If bulk moderating:
-- Can: Select multiple groups
-- Can: Approve all selected
-- Confirmation for bulk action
-- Each approved individually
+### If group name is inappropriate:
+- Admin can: Suggest alternative name
+- Requests: Name change
+- Keeps other details approved
+- Organizer updates and resubmits
 
 ### If auto-flagged by system:
 - System flags suspicious groups

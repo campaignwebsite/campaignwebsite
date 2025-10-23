@@ -1,5 +1,14 @@
 # User: Register
 
+> **Note:** This user journey needs to be re-evaluated and redesigned. Key elements to include:
+> - For groups and campaigns: Show email field with "Keep me updated" button for immediate subscription (without additional checkbox)
+> - For events: "Sign up for event" button with additional checkbox for email opt-in
+> - Ability to sign up for events and groups, and create events and groups, with an anonymous account
+> - Converting anonymous account to verified account on email confirmation
+> - Passkey requirement for submitting new event/group for review
+> - When email address submitted doesn't exist: Show rest of form questions before email confirmation to reduce friction
+> - Data linked to anonymous account until email confirmed
+
 ## Overview
 
 A first-time visitor creates an account to participate in events, join groups, or support campaigns.

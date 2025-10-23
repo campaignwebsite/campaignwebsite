@@ -1,5 +1,7 @@
 # User: Join Campaign
 
+> **Note:** See register.md journey notes regarding anonymous accounts and email subscription flow.
+
 ## Overview
 
 A user joins a campaign to show support and participate in campaign activities.
@@ -34,7 +36,7 @@ So that I can support the cause and participate in activities
    - Shows: Campaign summary
    - Shows: What joining means (receive updates, access to events)
    - Optional: Reason for joining (text area)
-   - Optional: Visibility setting (public support vs private)
+   - Note: Support is always public (first name only)
    - Checkbox: Agree to receive campaign updates
    - Button: "Join Campaign"
 

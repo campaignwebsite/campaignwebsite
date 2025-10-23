@@ -34,7 +34,8 @@ So that I can learn about the cause and decide if I want to participate
    - Sees: Media gallery (images, videos)
 
 3. User views ways to get involved:
-   - Sees: Call-to-action buttons (Join, Donate, Sign Petition)
+   - Sees: Call-to-action buttons (Join, Sign Petition)
+   - Note: Donation features will be added later
    - Sees: Upcoming events related to campaign
    - Sees: Active groups within campaign
    - Sees: Social sharing buttons

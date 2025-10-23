@@ -33,13 +33,16 @@ So that I can ensure quality and prevent abuse
    - Can: Sort and filter pending items
    - Click: Email to review details
 
-3. Admin views email details:
+3. Admin clicks on email to review:
+   - System navigates to email edit page
+   - Email edit view shown with moderation section
    - Sees: Full email preview (as recipients will see it)
-   - Sees: Subject line
-   - Sees: Sender information
+   - Sees: Subject line and sender information
    - Sees: Recipient count and segments
-   - Sees: Organizer information
-   - Can: View raw HTML/content
+   - Sees: Link to organizer's profile
+   - Sees: Link to related event/group/campaign (if applicable)
+   - Sees: Information about any previous rejections of this email
+   - Note: Once approved for sending, editing is no longer possible
 
 4. Admin reviews email content:
    - Checks: Content quality and appropriateness
@@ -47,7 +50,7 @@ So that I can ensure quality and prevent abuse
    - Checks: Complies with community guidelines
    - Checks: Proper formatting and links work
    - Can: Send test email to self
-   - Can: View organizer's history
+   - Can: Click link to view organizer's profile (with history)
 
 5. Admin makes decision:
    - Option 1: Approve email
@@ -58,12 +61,13 @@ So that I can ensure quality and prevent abuse
 6. If admin approves:
    - Clicks "Approve" button
    - Optional: Add approval note
-   - Confirmation modal: "Approve for sending?"
-   - Clicks "Confirm Approval"
+   - Modal appears: "Send email now or later?"
+   - Buttons: "Send Now", "Schedule for Later", "Cancel"
+   - If "Send Now": Email queued immediately
+   - If "Schedule for Later": Date/time picker shown
    - System updates status to "approved"
-   - Email queued for sending
    - Organizer notified: "Email approved"
-   - Success: "Email approved and queued"
+   - Success: "Email approved"
 
 7. If admin rejects:
    - Clicks "Reject" button
@@ -93,28 +97,15 @@ So that I can ensure quality and prevent abuse
 - Higher priority for review
 
 ### If admin needs more context:
-- Can: View related event/group/campaign
-- Can: See organizer's previous emails
-- Can: Check recipient complaints history
-- Can: Contact organizer for clarification
-
-### If multiple admins reviewing:
-- Shows: "Being reviewed by [Admin Name]"
-- Prevents: Duplicate reviews
-- Can: Take over review if urgent
-- Activity logged
+- Can: View related event/group/campaign via link
+- Can: See organizer's previous emails on their profile
+- Can: Check recipient complaints history on person's profile
 
 ### If email auto-flagged by system:
 - Warning badge: "Flagged for review"
 - Shows: Reason for flag (spam words, mass send)
 - Admin can: Override flag if legitimate
 - Logged for pattern analysis
-
-### If admin bulk moderates:
-- Can: Select multiple emails
-- Can: Approve all selected
-- Each approved individually
-- Confirmation for bulk action
 
 ## Success Criteria
 
